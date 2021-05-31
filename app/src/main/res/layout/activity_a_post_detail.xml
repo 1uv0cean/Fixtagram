@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <include
+        android:id="@+id/postAuthorLayout"
+        layout="@layout/include_post_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <include
+        android:id="@+id/postTextLayout"
+        layout="@layout/include_post_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/postAuthorLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@+id/postTextLayout"
+        android:orientation="vertical"/>
+        <RadioGroup android:id="@+id/radio_group"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/postTextLayout">
+            <RadioButton android:layout_weight="1"
+                android:checked="true"
+                android:text="처리대기"
+                android:id="@+id/rg_btn1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <RadioButton android:layout_weight="1"
+                android:text="처리중"
+                android:id="@+id/rg_btn2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+            <RadioButton android:layout_weight="1"
+                android:text="처리완료"
+                android:id="@+id/rg_btn3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonPostProgress"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:text="저장" />
+
+
+
+    <LinearLayout
+        android:id="@+id/commentForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginTop="20dp"
+        android:weightSum="1.0">
+
+        <EditText
+            android:id="@+id/fieldCommentText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:hint="인수인계/조치사항"
+            android:maxLines="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonPostComment"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="게시" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPostComments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/commentForm"
+        tools:listitem="@layout/item_comment" />
+
+</RelativeLayout>

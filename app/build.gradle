@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+check.dependsOn 'assembleDebugAndroidTest'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.hwiandyong.firebase.project.fixtagram"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+
+
+dependencies {
+    //implementation project(":internal:lintchecks")
+    //implementation project(":internal:chooserx")
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    //Map(Google)
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-base:17.5.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    // Database (Java)
+    implementation 'com.google.firebase:firebase-database:19.5.1'
+
+    // Firebase Authentication (Java)
+    implementation 'com.google.firebase:firebase-auth:20.0.1'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation 'com.firebaseui:firebase-ui-database:6.3.0'
+
+    // Needed to fix a dependency conflict with FirebaseUI'
+    implementation 'androidx.arch.core:core-runtime:2.1.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.firebase:firebase-storage:19.2.0'
+
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+}
+
+repositories {
+    mavenCentral()
+}

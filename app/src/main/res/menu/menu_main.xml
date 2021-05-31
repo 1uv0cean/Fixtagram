@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="로그아웃"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_map"
+        android:title="사무실 위치"
+        android:visible="true"
+        app:showAsAction="never" />
+</menu>

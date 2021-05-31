@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "978095988194",
+    "firebase_url": "https://asmr-f5a11.firebaseio.com",
+    "project_id": "asmr-f5a11",
+    "storage_bucket": "asmr-f5a11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978095988194:android:5e554e948415e834d3adbb",
+        "android_client_info": {
+          "package_name": "com.google.firebase.quickstart.database"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978095988194-2q11qjikhdidshpqs42e8p975incdr48.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcA3I_fZ0Ug5Pay3K2fDbRzf215ucPBLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978095988194-2q11qjikhdidshpqs42e8p975incdr48.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978095988194:android:5a593e3da1ef4284d3adbb",
+        "android_client_info": {
+          "package_name": "com.hwiandyong.firebase.project.fixtagram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978095988194-2q11qjikhdidshpqs42e8p975incdr48.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcA3I_fZ0Ug5Pay3K2fDbRzf215ucPBLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978095988194-2q11qjikhdidshpqs42e8p975incdr48.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

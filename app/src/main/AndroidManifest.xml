@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hwiandyong.firebase.project.fixtagram">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="ManifestOrder" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/fixtagram_icon"
+        android:label="Fixtagram"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="n"
+        android:fullBackupContent="@xml/backup_descriptor">
+
+        <activity android:name="com.hwiandyong.firebase.project.fixtagram.java.SplashActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.MainActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.A_PostDetailActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.A_MainActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.SignInActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.NewPostActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.PostDetailActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.MapActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.hwiandyong.firebase.project.fixtagram.java.A_MapActivity"
+            android:label="Fixtagram"
+            android:theme="@style/AppTheme" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC0-eXUvZBKahR8YVjURVdy85MquAd8DlE" />
+    </application>
+
+</manifest>
